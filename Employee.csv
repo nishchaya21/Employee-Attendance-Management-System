@@ -1,3 +1,3 @@
 ﻿Employee ID,First Name,Last Name,Photo Location,Audio Location
-2821,Nishchaya,Jandyal,C://Python//Face Recognition//Project//Faces//p1.JPG,C://Python//Face Recognition//Project//Audio//a1.mp3
-2822,Parth,Rathi,C://Python//Face Recognition//Project//Faces//p2.jpg,C://Python//Face Recognition//Project//Audio//a2.mp3
+2821,Nishchaya,Jandyal,./Faces//p1.JPG,./Audio/a1.mp3
+2822,Parth,Rathi,./Faces/p2.jpg,./Audio/a2.mp3
