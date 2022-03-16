@@ -5,7 +5,7 @@ import sys
 import pandas as pd
 import datetime
 import pygame
-ef = pd.read_csv('C://Python//Face Recognition//Project//Employee.csv')
+ef = pd.read_csv('./Employee.csv')
 empno = ef["Employee ID"].tolist()
 firstname = ef["First Name"].tolist()
 lastname = ef["Last Name"].tolist()
@@ -45,14 +45,14 @@ if(emp_index != -1):
     f=firstname[emp_index]
     l=lastname[emp_index]
     ar="\n"+eno+" "+f+" "+l+" "+x
-    f=open("C://Python//Face Recognition//Project//attend.txt","a")
+    f=open("./attend.txt","a")
     f.write(ar)
     f.close()
     print("====================================================")
     print(ar)
 pil_uk=Image.fromarray(uk)
 draw=ImageDraw.Draw(pil_uk)
-fnt=ImageFont.truetype('C://Python//Face Recognition//Montserrat.ttf',40)
+fnt=ImageFont.truetype('./Montserrat.ttf',40)
 if emp_index ==-1:
     name="Face NOT Recognized"
 else:
@@ -64,10 +64,10 @@ pil_uk.show()
 audioloc=audiolocation[emp_index]
 pygame.mixer.init()
 if emp_index ==-1:
-    pygame.mixer.music.load('C://Python//Face Recognition//Project//Audio//fail.mp3')
+    pygame.mixer.music.load('./Audio/fail.mp3')
     pygame.mixer.music.play()
 else:
     pygame.mixer.music.load(audioloc)
     pygame.mixer.music.play()
-    pygame.mixer.music.queue('C://Python//Face Recognition//Project//Audio//success.mp3')
+    pygame.mixer.music.queue('./Audio/success.mp3')
     pygame.mixer.music.play()
